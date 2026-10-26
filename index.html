@@ -29,7 +29,7 @@ const people=[
 ['Nabila','Sosmed & Corporate','assets/sosmed.jpg','sosmed'],
 ['Siti Ikmawatul M.','Bendahara','assets/bendahara.jpg','bendahara'],
 ['Naga','Humas & PR','assets/humas.jpg','humas'],
-['Siti S ulekah','Dokumentasi','assets/dokumentasi_1.jpg','dokumentasi-1'],
+['Siti Sulekah','Dokumentasi','assets/dokumentasi_1.jpg','dokumentasi-1'],
 ['Ari Setiawan','Dokumentasi','assets/dokumentasi_2.jpg','dokumentasi-2'],
 ['Koni Dwi Prasetya, PhD','Divisi Desain','assets/koni.jpg','desain']];
 const grid=document.getElementById('teamGrid');people.forEach(([name,role,photo,id])=>{const el=document.createElement('article');el.className='person';el.id='person-'+id;if(photo){const img=document.createElement('img');img.src=photo;img.alt='Foto '+name+' — '+role;img.loading='lazy';el.append(img)}else{const avatar=document.createElement('div');avatar.className='avatar';avatar.textContent=name.split(' ').slice(0,2).map(s=>s[0]).join('');el.append(avatar)}const h=document.createElement('h3');h.textContent=name;const p=document.createElement('p');p.textContent=role;el.append(h,p);grid.append(el)});document.getElementById('year').textContent=new Date().getFullYear();
